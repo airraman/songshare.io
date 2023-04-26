@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+.submissionmain {
+  background-color: 	#1db954cf;
+  width: 50vw;
+  height: 60vh;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  margin: -25px 0 0 -25px;
+  color: white;
+  border-radius: 25px;
+}
+
+.submissionspace{
+  height:2.5vh;
+  width: 40vw;
+  border-radius: 10px;
+}
+.submissionspacesmall{
+  height:3vh;
+  width: 30vw;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.submissionhold{
+  height: 3vh;
+}
+
+.descriptionspace{
+  height: 10vh;
+  width: 40vw;
+  border-radius: 10px;
+}
+
+.submitcontainer{
+  margin-top: 70px;
+}
+
+.playlistinstructions{
+  margin-top: 50px;
+}
+
