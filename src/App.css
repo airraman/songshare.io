@@ -79,3 +79,20 @@
   margin-top: 50px;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  .submissionmain {
+    background-color: 	#1db954cf;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    margin: -25px 0 0 -25px;
+    color: white;
+    border-radius: 25px;
+  }
+}
