@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100vw;
 }
 
 .App-logo {
@@ -79,20 +80,69 @@
   margin-top: 50px;
 }
 
+.songssent{
+  border-color: black;
+  border-style: solid;
+  width: 50vw;
+  margin-top: 10vh;
+  position: absolute;
+  align-items: center;
+  top: 1%;
+  left: 24%;
+  border-radius: 25px;
+}
+
+/* Sizing for iPhone Screen */
+
 @media screen and (max-width: 480px) {
   body {
-    background-color: lightgreen;
+    background-color: white;
+  }
+
+  .App {
+    text-align: center;
+    /* width: 30vw; */
   }
 
   .submissionmain {
     background-color: 	#1db954cf;
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    margin: -25px 0 0 -25px;
     color: white;
     border-radius: 25px;
+    position: absolute;
+    margin: -60px 0 0 -80px;
+
   }
+
+  .submissionspace{
+    height:2.5vh;
+    width: 70vw;
+    border-radius: 10px;
+  }
+  .submissionspacesmall{
+    height:3vh;
+    width: 60vw;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .playlistinstructions{
+    margin-top: 50px;
+  }
+
+  .songssent{
+    border-color: black;
+    border-style: solid;
+    width: 100vw;
+    margin-top: 5vh;
+    margin-left: -18vw;
+    /* position: absolute; */
+    /* align-items: center; */
+    /* top: 1%;
+    left: 24%; */
+    border-radius: 25px;
+  }
+
 }
+

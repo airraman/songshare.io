@@ -1,29 +1,5 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-
-
-// const commonStyles = {
-//     bgcolor: 'background.paper',
-//     border: 1,
-//     m: 1,
-//     borderColor: 'text.primary',
-//     width: '5rem',
-//     height: '5rem',
-//   };
-
-//   const Item = styled(Paper)(({ theme }) => ({
-//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//     ...theme.typography.body2,
-//     padding: theme.spacing(1),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   }));
 
 function SubmissionCard(){
 
