@@ -87,7 +87,7 @@ function SubmissionCard(){
             <div className='submitcontainer'>
                 <Button variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
             </div>
-            <Input placeholder='Basic usage' />
+            {/* <Input placeholder='Basic usage' />
             <Input placeholder='Basic usage' />
             <Box
       component="form"
@@ -100,7 +100,7 @@ function SubmissionCard(){
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <TextField id="filled-basic" label="Filled" variant="filled" />
       <TextField id="standard-basic" label="Standard" variant="standard" />
-    </Box>
+    </Box> */}
         </div>
         
 
