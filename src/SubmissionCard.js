@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { Input } from '@chakra-ui/react'
 
 function SubmissionCard(){
 
@@ -50,6 +53,7 @@ function SubmissionCard(){
     return(
         <div className='submissionmain'>
             
+            
             <div className='playlistinstructions'>
             <h1>SongShare.io V 1.0</h1>
                 <h3>
@@ -83,6 +87,20 @@ function SubmissionCard(){
             <div className='submitcontainer'>
                 <Button variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
             </div>
+            <Input placeholder='Basic usage' />
+            <Input placeholder='Basic usage' />
+            <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="filled-basic" label="Filled" variant="filled" />
+      <TextField id="standard-basic" label="Standard" variant="standard" />
+    </Box>
         </div>
         
 

@@ -5,9 +5,9 @@ import SubmissionCard from './SubmissionCard';
 function App() {
   return (
     <div className="App">
-      <div className='songssent'>
+      {/* <div className='songssent'>
         <h3>2597 Songs Sent</h3>
-      </div>
+      </div> */}
       <SubmissionCard />
     </div>
   );
