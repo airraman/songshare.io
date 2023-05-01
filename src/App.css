@@ -112,7 +112,7 @@
     border-radius: 25px;
     margin: -90px 0 0 -85px;
     border: solid border transparent;
-    border-color: red;
+    /* border-color: red; */
     border-radius: 1em;
 
   }
