@@ -52,6 +52,9 @@ function SubmissionCard(){
 
     return(
         <div className='submissionmain'>
+            <div className='cardtext'>
+                <h3>A community for music producers to share their music with a global audience via SMS </h3>
+            </div>
             <form>
             <div className='submissioninputs'>
                 <div className='submissionhold'>
