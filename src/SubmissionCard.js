@@ -52,23 +52,7 @@ function SubmissionCard(){
 
     return(
         <div className='submissionmain'>
-            
-            
-            <div className='playlistinstructions'>
-            <h1>SongShare.io V 1.0</h1>
-                <h3>
-                    Instructions:
-                </h3>
-                <h4>
-                    Follow playlist: Lofi (only for vibing)
-                </h4>
-                <h4>
-                    Follow @songshare.io
-                </h4>
-                <h4>
-                    Submit your song below
-                </h4>
-            </div>
+            <form>
             <div className='submissioninputs'>
                 <div className='submissionhold'>
                     <input type="text" id="fname" name="fname" placeholder="Artist Name:" className='submissionspace' onChange={handleArtistName}></input>
@@ -84,23 +68,20 @@ function SubmissionCard(){
                     <input type="text" id="fname" name="fname" placeholder="Phone Number:" className='submissionspacesmall'onChange={handlePhoneNumber}></input>
                 </div>
             </div>
+            </form>
+
             <div className='submitcontainer'>
                 <Button variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
             </div>
-            {/* <Input placeholder='Basic usage' />
-            <Input placeholder='Basic usage' />
-            <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-      <TextField id="filled-basic" label="Filled" variant="filled" />
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-    </Box> */}
+            {/* <div>
+                <Input placeholder='Basic usage' />
+            </div>
+            <div>
+                <Input placeholder='Basic usage' />
+            </div> */}
+
+
+
         </div>
         
 

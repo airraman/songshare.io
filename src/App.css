@@ -96,7 +96,7 @@
 
 @media screen and (max-width: 480px) {
   body {
-    background-color: white;
+    background-color: black;
   }
 
   .App {
@@ -105,26 +105,32 @@
   }
 
   .submissionmain {
-    background-color: 	#1db954cf;
+    background-color: 	#0e1111;
     width: 95vw;
-    height: 100vh;
+    height: 80vh;
     color: white;
     border-radius: 25px;
-    /* position: absolute; */
-    margin: -160px 0 0 -85px;
+    margin: -40px 0 0 -85px;
+    border: solid border transparent;
+    border-color: red;
+    border-radius: 1em;
 
+  }
+
+  .descriptionspace{
+    /* height: 10vh; */
+    width: 85vw;
+    border-radius: 10px;
   }
 
   .submissionspace{
-    height:2.5vh;
-    width: 70vw;
+    /* height:2.5vh; */
+    width: 85vw;
     border-radius: 10px;
   }
   .submissionspacesmall{
-    height:3vh;
-    width: 60vw;
+    width: 85vw;
     border-radius: 10px;
-    margin-top: 10px;
   }
 
   .playlistinstructions{
@@ -137,11 +143,17 @@
     width: 95vw;
     margin-top: 5vh;
     margin-left: -18vw;
-    /* position: absolute; */
-    /* align-items: center; */
-    /* top: 1%;
-    left: 24%; */
     border-radius: 25px;
+  }
+
+  .submissioninputs{
+    margin-top: 20vh;
+    border-style: solid;
+    border-color: #282c34;
+    height: 40vh;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
