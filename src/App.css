@@ -96,35 +96,35 @@
 
 @media screen and (max-width: 480px) {
   body {
-    background-color: black;
+    background-color: #191919;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   .App {
     text-align: center;
-    /* width: 30vw; */
   }
 
   .submissionmain {
-    background-color: 	#0e1111;
+    background-color: 	#202023;
     width: 95vw;
     height: 80vh;
     color: white;
-    border-radius: 25px;
     margin: -90px 0 0 -85px;
-    border: solid border transparent;
-    /* border-color: red; */
+    border: 25px solid;
+    border-color: red;
     border-radius: 1em;
+    border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+    border-width: 2.5px;
 
   }
 
   .descriptionspace{
-    /* height: 10vh; */
     width: 85vw;
     border-radius: 10px;
   }
 
   .submissionspace{
-    /* height:2.5vh; */
     width: 85vw;
     border-radius: 10px;
   }
@@ -159,6 +159,11 @@
   .cardtext{
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: 10vh;
+  }
+
+  .submitcontainer{
+    margin-top: 10px;
   }
 
 }
