@@ -105,8 +105,8 @@
     text-align: center;
   }
 
-  .submissionmain {
-    background-color: 	#202023;
+  .submissionmain{
+    background-color: 	#202023d0;
     width: 95vw;
     height: 80vh;
     color: white;
@@ -114,9 +114,22 @@
     border: 25px solid;
     border-color: red;
     border-radius: 1em;
-    border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+    border-image: linear-gradient(to right, darkblue, #9031AA) 1;
     border-width: 2.5px;
+  }
 
+  .subcriptionmain{
+    background-color: 	#202023;
+    width: 95vw;
+    height: 80vh;
+    color: white;
+    /* margin: -90px 0 0 -88px; */
+    margin-top: 100vh;
+    border: 25px solid;
+    border-color: red;
+    border-radius: 1em;
+    border-image: linear-gradient(to right, darkblue, #9031AA) 1;
+    border-width: 2.5px;
   }
 
   .descriptionspace{
@@ -147,24 +160,30 @@
   }
 
   .submissioninputs{
-    margin-top: 10vh;
+    margin-top: 2.5vh;
     border-style: solid;
-    border-color: #282c34;
-    height: 30vh;
+    border-color: #9031AA;
+    height: 50vh;
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
+    border-width: 2.5px;
   }
 
   .cardtext{
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-inline: 2vh;
   }
 
   .submitcontainer{
-    margin-top: 10px;
+    margin-top: -10vh;
+  }
+
+  .test{
+    border: 1px solid white;
+    height: 100vh;
   }
 
 }

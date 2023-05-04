@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import FormHelperText from '@mui/material/FormHelperText';
 import { Input } from '@chakra-ui/react'
 
 function SubmissionCard(){
@@ -56,8 +57,35 @@ function SubmissionCard(){
                 <h3>A community for music producers to share their music with a global audience via SMS </h3>
             </div>
             <form>
+
             <div className='submissioninputs'>
-                <div className='submissionhold'>
+                <div>
+
+<Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: .5, width: '30ch' },
+      }}
+      noValidate
+      autoComplete="off"
+>
+
+<TextField classname = "test" id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw'}} color="secondary"  border = "1px solid white" focused/>
+                    {/* <FormHelperText id="component-helper-text">
+          Some important helper text
+        </FormHelperText> */}
+                    <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '50vw' }}  color="success" focused />
+                    <TextField id="outlined-basic" label="Artist Email" variant="outlined" sx={{ width: '80vw' }} color="secondary" focused />
+                    <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '80vw' }} color="secondary" focused />
+
+</Box>
+
+
+                </div>
+                {/* <div>
+                    <TextField id="outlined-textarea" label="Song Description" placeholder="Placeholder" multiline sx={{ width: '80vw' }} color="secondary" focused />
+                </div> */}
+                {/* <div className='submissionhold'>
                     <input type="text" id="fname" name="fname" placeholder="Artist Name:" className='submissionspace' onChange={handleArtistName}></input>
                 </div>
                 <div className='submissionhold'>
@@ -65,17 +93,18 @@ function SubmissionCard(){
                 </div>
                 <div className='submissiondescription'>
                     <input type="text" id="fname" name="fname" placeholder="Track Description:" className='descriptionspace' onChange={handleTrackDescription}></input>
-                </div>
-                <div className='submissionhold'>
+                </div> */}
+                {/* <div className='submissionhold'>
                     <input type="text" id="fname" name="fname" placeholder="Email:" className='submissionspacesmall' onChange={handleEmail}></input><br></br>
                     <input type="text" id="fname" name="fname" placeholder="Phone Number:" className='submissionspacesmall'onChange={handlePhoneNumber}></input>
-                </div>
+                </div> */}
             </div>
-            </form>
-
             <div className='submitcontainer'>
                 <Button variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
             </div>
+            </form>
+
+
             {/* <div>
                 <Input placeholder='Basic usage' />
             </div>
