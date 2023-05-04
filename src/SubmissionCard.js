@@ -64,19 +64,19 @@ function SubmissionCard(){
 <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: .5, width: '30ch' },
+        '& > :not(style)': { m: .5, width: '32ch' },
       }}
       noValidate
       autoComplete="off"
 >
 
-<TextField classname = "test" id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw'}} color="secondary"  border = "1px solid white" focused/>
+<TextField classname = "test" id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
                     {/* <FormHelperText id="component-helper-text">
           Some important helper text
         </FormHelperText> */}
-                    <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '50vw' }}  color="success" focused />
-                    <TextField id="outlined-basic" label="Artist Email" variant="outlined" sx={{ width: '80vw' }} color="secondary" focused />
-                    <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '80vw' }} color="secondary" focused />
+                    <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
+                    <TextField id="outlined-basic" label="Artist Email" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="secondary" focused />
+                    <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="success" focused />
 
 </Box>
 
@@ -100,7 +100,7 @@ function SubmissionCard(){
                 </div> */}
             </div>
             <div className='submitcontainer'>
-                <Button variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
+                <Button gi variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
             </div>
             </form>
 
