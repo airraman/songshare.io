@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import ButtonGroup from '@mui/material/ButtonGroup';
 import FormHelperText from '@mui/material/FormHelperText';
 import { Input } from '@chakra-ui/react'
 
@@ -53,6 +54,10 @@ function SubmissionCard(){
 
     return(
         <div className='submissionmain'>
+                        <ButtonGroup variant="outlined" aria-label="outlined button group">
+        <Button>MUSICIAN</Button>
+        <Button>LISTENER</Button>
+      </ButtonGroup>
             <div className='cardtext'>
                 <h3>A community for music producers to share their music with a global audience via SMS </h3>
             </div>
@@ -103,6 +108,7 @@ function SubmissionCard(){
                 <Button gi variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
             </div>
             </form>
+
 
 
             {/* <div>
