@@ -69,7 +69,7 @@ function SubmissionCard(){
                 <div>
                     <Box component="form" sx={{ '& > :not(style)': { m: .5, width: '32ch' }}} noValidate autoComplete="off" >
                         <TextField classname = "test" id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
-                        <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
+                        <TextField id="outlined-basic" label="Song Description" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
                         <TextField id="outlined-basic" label="Artist Email" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="secondary" focused />
                         <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="success" focused />
                     </Box>
