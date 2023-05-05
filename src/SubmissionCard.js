@@ -5,6 +5,8 @@ import TextField from '@mui/material/TextField';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import FormHelperText from '@mui/material/FormHelperText';
 import { Input } from '@chakra-ui/react'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 function SubmissionCard(){
 
@@ -13,6 +15,22 @@ function SubmissionCard(){
     const [trackDescription, setTrackDescription] = useState("")
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
+
+    const theme = createTheme({
+        status: {
+          danger: '#e53e3e',
+        },
+        palette: {
+          primary: {
+            main: '#0971f1',
+            darker: '#053e85',
+          },
+          neutral: {
+            main: '#64748B',
+            contrastText: '#fff',
+          },
+        },
+      });
 
     let songObj ={
         artistName,
@@ -56,8 +74,8 @@ function SubmissionCard(){
         <div className='submissionmain'>
             <div className='doublebutton'>
                 <ButtonGroup variant="outlined" aria-label="outlined button group">
-                <Button>MUSICIAN</Button>
-                <Button>LISTENER</Button>
+                <Button color="secondary" >MUSICIAN</Button>
+                <Button color="secondary" >LISTENER</Button>
                 </ButtonGroup>
             </div>
 
@@ -76,7 +94,9 @@ function SubmissionCard(){
                 </div>
             </div>
             <div className='submitcontainer'>
-                <Button gi variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Submit</Button>
+                <ThemeProvider theme={theme}>
+                    <Button  color="secondary" variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300}}>Submit</Button>
+                </ThemeProvider>
             </div>
             </form>
         </div>      
