@@ -110,7 +110,7 @@
     width: 95vw;
     height: 80vh;
     color: white;
-    margin: -60px 0 0 -89px;
+    margin: -80px 0 0 -89px;
     border: 25px solid;
     border-color: red;
     border-radius: 1em;
@@ -173,7 +173,7 @@
   .cardtext{
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 5vh;
+    margin-top: 2.5vh;
     margin-inline: 2vh;
   }
 
@@ -184,6 +184,10 @@
   .test{
     border: 1px solid white;
     height: 100vh;
+  }
+
+  .doublebutton{
+    margin-top: 3vh;
   }
 
 }
