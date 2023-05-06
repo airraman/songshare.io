@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function SubscriptionCard(){
 
@@ -49,29 +53,27 @@ function SubscriptionCard(){
 
     return(
         <div className='subcriptionmain'>
+                        <div className='doublebutton'>
+                <ButtonGroup variant="outlined" aria-label="outlined button group">
+                <Button color="secondary" >MUSICIAN</Button>
+                <Button color="secondary" >LISTENER</Button>
+                </ButtonGroup>
+            </div>
             <div className='cardtext'>
                 <h3>The best music on the internet, sent to you via Text </h3>
             </div>
             <form>
-            <div className='submissioninputs'>
-                <div className='submissionhold'>
-                    <input type="text" id="fname" name="fname" placeholder="First Name:" className='submissionspace' onChange={handleArtistName}></input>
+            <div className='subcriptioninputs'>
+                <div>
+                    <Box component="form" sx={{ '& > :not(style)': { m: .5, width: '32ch' }}} noValidate autoComplete="off" >
+                        <TextField classname = "test" id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
+                        <TextField id="outlined-basic" label="Song Description" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
+                    </Box>
                 </div>
-                <div className='submissionhold'>
-                    <input type="text" id="fname" name="fname" placeholder="Phone Number:" className='submissionspace' onChange={handleTrackName}></input>
-                </div>
-                {/* <div className='submissiondescription'>
-                    <input type="text" id="fname" name="fname" placeholder="Track Description:" className='descriptionspace' onChange={handleTrackDescription}></input>
-                </div> */}
-                {/* <div className='submissionhold'>
-                    <input type="text" id="fname" name="fname" placeholder="Email:" className='submissionspacesmall' onChange={handleEmail}></input><br></br>
-                    <input type="text" id="fname" name="fname" placeholder="Phone Number:" className='submissionspacesmall'onChange={handlePhoneNumber}></input>
-                </div> */}
             </div>
             </form>
-
-            <div className='submitcontainer'>
-                <Button variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Subscribe</Button>
+            <div className='subscriptioncontainer'>
+                <Button color="secondary" variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Subscribe</Button>
             </div>
         </div>
     )

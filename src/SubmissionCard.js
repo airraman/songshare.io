@@ -3,8 +3,6 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import FormHelperText from '@mui/material/FormHelperText';
-import { Input } from '@chakra-ui/react'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
@@ -78,7 +76,6 @@ function SubmissionCard(){
                 <Button color="secondary" >LISTENER</Button>
                 </ButtonGroup>
             </div>
-
             <div className='cardtext'>
                 <h3>A community for music producers to share their music with a global audience via SMS </h3>
             </div>

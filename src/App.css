@@ -106,7 +106,7 @@
   }
 
   .submissionmain{
-    background-color: 	#202023d0;
+    background-color: 	#202023;
     width: 95vw;
     height: 75vh;
     color: white;
@@ -123,7 +123,7 @@
     width: 95vw;
     height: 80vh;
     color: white;
-    /* margin: -90px 0 0 -88px; */
+    margin: -20px 0 0 10px;
     margin-top: 100vh;
     border: 25px solid;
     border-color: red;
@@ -161,8 +161,6 @@
 
   .submissioninputs{
     margin-top: 2.5vh;
-    /* border-style: solid;
-    border-color: #9031AA; */
     height: 50vh;
     width: 90vw;
     margin-left: auto;
@@ -188,6 +186,15 @@
 
   .doublebutton{
     margin-top: 3vh;
+  }
+
+  .subscriptioncontainer{
+    margin-top: 10vh;
+  }
+
+  .logo{
+    height: 10vh;
+    margin-top: 2vh;
   }
 
 }

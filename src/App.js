@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Logo />
       <SubmissionCard />
-      {/* <SubscriptionCard /> */}
+      <SubscriptionCard />
     </div>
   );
 }
