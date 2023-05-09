@@ -67,7 +67,7 @@ function SubscriptionCard(){
                 <div>
                     <Box component="form" sx={{ '& > :not(style)': { m: .5, width: '32ch' }}} noValidate autoComplete="off" >
                         <TextField id="outlined-basic" label="Subscriber Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
-                        <TextField id="outlined-basic" label="Phone Number" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
+                        <TextField id="outlined-basic" label="Subscriber Phone Number" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
                     </Box>
                 </div>
             </div>
