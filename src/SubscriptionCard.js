@@ -62,16 +62,16 @@ function SubscriptionCard(){
             <div className='cardtext'>
                 <h3>The best music on the internet, sent to you via Text </h3>
             </div>
-            <form>
+
             <div className='subcriptioninputs'>
                 <div>
                     <Box component="form" sx={{ '& > :not(style)': { m: .5, width: '32ch' }}} noValidate autoComplete="off" >
-                        <TextField classname = "test" id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
-                        <TextField id="outlined-basic" label="Song Description" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
+                        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
+                        <TextField id="outlined-basic" label="Phone Number" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
                     </Box>
                 </div>
             </div>
-            </form>
+
             <div className='subscriptioncontainer'>
                 <Button color="secondary" variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Subscribe</Button>
             </div>

@@ -79,14 +79,14 @@ function SubmissionCard(){
             <div className='cardtext'>
                 <h3>A community for music producers to share their music with a global audience via SMS </h3>
             </div>
-            <form>
+
             <div className='submissioninputs'>
                 <div>
                     <Box component="form" sx={{ '& > :not(style)': { m: .5, width: '32ch' }}} noValidate autoComplete="off" >
-                        <TextField classname = "test" id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
-                        <TextField id="outlined-basic" label="Song Description" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
-                        <TextField id="outlined-basic" label="Artist Email" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="secondary" focused />
-                        <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="success" focused />
+                        <TextField id="outlined-basic" label="Artist Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused onChange={handleArtistName}/>
+                        <TextField id="outlined-basic" label="Song Name" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused onChange={handleTrackName} />
+                        <TextField id="outlined-basic" label="Song Description" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="secondary" focused onChange={handleTrackDescription} />
+                        <TextField id="outlined-basic" label="Artist Email" variant="outlined" sx={{ width: '80vw', input: { color: 'white' } }} color="success" focused onChange={handleEmail}/>
                     </Box>
                 </div>
             </div>
@@ -95,7 +95,7 @@ function SubmissionCard(){
                     <Button  color="secondary" variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300}}>Submit</Button>
                 </ThemeProvider>
             </div>
-            </form>
+
         </div>      
     )
 }
