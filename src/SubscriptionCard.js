@@ -60,7 +60,7 @@ function SubscriptionCard(){
                 </ButtonGroup>
             </div>
             <div className='cardtext'>
-                <h3>The best music on the internet, shared with you via Text </h3>
+                <h3>The best music on the internet, shared with you via SMS </h3>
             </div>
 
             <div className='subcriptioninputs'>
