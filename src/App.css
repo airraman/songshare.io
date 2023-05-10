@@ -92,6 +92,22 @@
   border-radius: 25px;
 }
 
+.showmusician{
+  display: true;
+}
+
+.hidemusician{
+  display: false;
+}
+
+.hidelistener{
+  display: false;
+}
+
+.showlistener{
+  display: true
+}
+
 /* Sizing for iPhone Screen */
 
 @media screen and (max-width: 480px) {

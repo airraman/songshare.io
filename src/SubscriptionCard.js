@@ -12,6 +12,7 @@ function SubscriptionCard(){
     const [trackDescription, setTrackDescription] = useState("")
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
+    const [musician, setMusician] = useState(false)
 
     let songObj ={
         artistName,
@@ -51,16 +52,28 @@ function SubscriptionCard(){
         setPhoneNumber(event.target.value)
     }
 
+    function handleMusicianChange(e){
+        console.log(e)
+        setMusician(true)
+        console.log(musician)
+    }
+
+    function handleListenerChange(e){
+        console.log(e)
+        setMusician(true)
+        console.log(musician)
+    }
+
     return(
         <div className='subcriptionmain'>
-                        <div className='doublebutton'>
+                        {/* <div className='doublebutton'>
                 <ButtonGroup variant="outlined" aria-label="outlined button group">
-                <Button color="secondary" >MUSICIAN</Button>
-                <Button color="secondary" >LISTENER</Button>
+                <Button color="secondary" onClick={handleMusicianChange} >MUSICIAN</Button>
+                <Button color="secondary" onClick={handleListenerChange} >LISTENER</Button>
                 </ButtonGroup>
-            </div>
+            </div> */}
             <div className='cardtext'>
-                <h3>The best music on the internet, shared with you via SMS </h3>
+                <h3>The best music, globally.</h3>
             </div>
 
             <div className='subcriptioninputs'>

@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ButtonGroup from '@mui/material/ButtonGroup';
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
@@ -13,6 +14,7 @@ function SubmissionCard(){
     const [trackDescription, setTrackDescription] = useState("")
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
+
 
     const theme = createTheme({
         status: {
@@ -67,18 +69,34 @@ function SubmissionCard(){
         console.log(event.target.value)
         setPhoneNumber(event.target.value)
     }
+    
+    const [musician, setMusician] = useState(false)
+
+    function handleMusicianChange(e){
+      console.log(e)
+      setMusician(!musician)
+      console.log(musician)
+  }
+  
+  function handleListenerChange(e){
+      console.log(e)
+      setMusician(!musician)
+      console.log(musician)
+  }
+
 
     return(
         <div className='submissionmain'>
+
+            <div className='cardtext'>
+                <h3>Share your music, globally </h3>
+            </div>
             <div className='doublebutton'>
                 <ButtonGroup variant="outlined" aria-label="outlined button group">
-                <Button color="secondary" >MUSICIAN</Button>
-                <Button color="secondary" >LISTENER</Button>
+                <Button color="secondary" onClick={handleMusicianChange} >MUSICIAN</Button>
+                <Button color="secondary" onClick={handleListenerChange} >LISTENER</Button>
                 </ButtonGroup>
-            </div>
-            <div className='cardtext'>
-                <h3>A community for music producers to share their music with a global audience via SMS </h3>
-            </div>
+      </div>
 
             <div className='submissioninputs'>
                 <div>
