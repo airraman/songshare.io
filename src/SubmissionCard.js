@@ -91,12 +91,12 @@ function SubmissionCard(){
             <div className='cardtext'>
                 <h3>Share your music, globally </h3>
             </div>
-            <div className='doublebutton'>
+            {/* <div className='doublebutton'>
                 <ButtonGroup variant="outlined" aria-label="outlined button group">
                 <Button color="secondary" onClick={handleMusicianChange} >MUSICIAN</Button>
                 <Button color="secondary" onClick={handleListenerChange} >LISTENER</Button>
                 </ButtonGroup>
-      </div>
+      </div> */}
 
             <div className='submissioninputs'>
                 <div>

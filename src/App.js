@@ -27,12 +27,12 @@ function handleListenerChange(e){
 
   return (
     <div className="App">
-            {/* <div className='doublebutton'>
+            <div className='doublebutton'>
                 <ButtonGroup variant="outlined" aria-label="outlined button group">
-                <Button color="secondary" onClick={handleMusicianChange} >MUSICIAN</Button>
-                <Button color="secondary" onClick={handleListenerChange} >LISTENER</Button>
+                <Button className={musician ? "musiciandisable" : "musicianenable"} color="secondary" onClick={handleMusicianChange} >MUSICIAN</Button>
+                <Button className={musician ? "listenerenable" : "listenerdisable"} color="secondary" onClick={handleListenerChange} >LISTENER</Button>
                 </ButtonGroup>
-      </div> */}
+      </div>
       <Logo />
       <div className= {musician ? "showmusician" : "hidemusician"}>
         <SubmissionCard />

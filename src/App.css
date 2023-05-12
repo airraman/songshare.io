@@ -92,22 +92,34 @@
   border-radius: 25px;
 }
 
-.showmusician{
+/* .showmusician{
   display: true;
-}
+} */
 
 .hidemusician{
-  display: false;
+  display: none;
 }
 
 .hidelistener{
-  display: false;
+  display: none;
 }
 
-.showlistener{
-  display: true
+/* .showlistener{
+  display: true */
+  /* margin-top: ;
+} */
+
+.musiciandisable{
+  pointer-events: none;
 }
 
+.listenerdisable{
+  pointer-events: none;
+}
+
+.listenerbutton {
+  pointer-events: none;
+}
 /* Sizing for iPhone Screen */
 
 @media screen and (max-width: 480px) {
@@ -126,7 +138,7 @@
     width: 95vw;
     height: 75vh;
     color: white;
-    margin: -80px 0 0 -93px;
+    margin: -40px 0 0 -88px;
     border: 25px solid;
     border-color: red;
     border-radius: 1em;
@@ -137,15 +149,16 @@
   .subcriptionmain{
     background-color: 	#202023;
     width: 95vw;
-    height: 80vh;
+    height: 75vh;
     color: white;
-    margin: -20px 0 0 10px;
-    margin-top: 100vh;
+    margin: -30px 0 0 5px;
+    /* margin-top: 100vh; */
     border: 25px solid;
     border-color: red;
     border-radius: 1em;
-    border-image: linear-gradient(to right, darkblue, #9031AA) 1;
+    border-image: linear-gradient(to right, rgb(99, 99, 178), #9031AA) 1;
     border-width: 2.5px;
+    margin-top: .5vh;
   }
 
   .descriptionspace{
