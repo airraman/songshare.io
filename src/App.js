@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SubmissionCard from './SubmissionCard';
 import Button from '@mui/material/Button';
 import SubscriptionCard from './SubscriptionCard';
@@ -10,6 +10,18 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 
 function App() {
 
+  const [userSongs, setUserSongs] = useState("")
+
+  useEffect(()=> {
+    fetch("http://localhost:8000/songs")
+    .then( res => {
+      return res.json()
+    })
+    .then((data) => {
+      console.log(data)
+      setUserSongs(data)
+    })
+  }, [])
 
   const [musician, setMusician] = useState(false)
 

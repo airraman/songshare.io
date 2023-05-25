@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import axios from 'axios';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -15,6 +16,21 @@ function SubmissionCard(){
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
 
+    // this.state = {
+    //     artistName: '',
+    //     trackName: '',
+    //     trackDescription: '',
+    //     email: ''
+    //  }
+
+    // changeHandler = (e) => {
+    //     this.setState({[e.target.name] : e.target.value})
+    //   }
+
+    // submitHandler = (e) => {
+    //     e.preventDefault();
+    //     console.log(this.state);
+    //   }
 
     const theme = createTheme({
         status: {
@@ -32,17 +48,42 @@ function SubmissionCard(){
         },
       });
 
-    let songObj ={
-        artistName,
-        trackName, 
-        trackDescription, 
-        email, 
-        phoneNumber
-    }
+
+
+    // let testObj = {
+    //     "artistname": "test",
+    //     "songname": "test",
+    //     "description": "test", 
+    //     "phonenumber": "test"
+    // }
 
     function sendClick(e){
+        e.preventDefault();
         console.log("Hi from Submit")
-        console.log(songObj)
+        
+        console.log(artistName, trackName, trackDescription, email, phoneNumber)
+
+        let songObj ={
+            artistName,
+            trackName, 
+            trackDescription, 
+            email, 
+            phoneNumber
+        }
+
+        console.log(songObj, e)
+
+
+        axios.post('https://sheet.best/api/sheets/e41dacf0-703a-42eb-ae45-2042eb75e6a3', songObj)
+        .then(response => {
+          console.log(response);
+        })
+
+        setArtistName('')
+        setTrackName('')
+        setTrackDescription('')
+        setEmail('')
+        setPhoneNumber('')
     }
 
     function handleArtistName(event){
@@ -84,20 +125,13 @@ function SubmissionCard(){
       console.log(musician)
   }
 
-
+  
     return(
         <div className='submissionmain'>
 
             <div className='cardtext'>
                 <h3>Share your music, globally </h3>
             </div>
-            {/* <div className='doublebutton'>
-                <ButtonGroup variant="outlined" aria-label="outlined button group">
-                <Button color="secondary" onClick={handleMusicianChange} >MUSICIAN</Button>
-                <Button color="secondary" onClick={handleListenerChange} >LISTENER</Button>
-                </ButtonGroup>
-      </div> */}
-
             <div className='submissioninputs'>
                 <div>
                     <Box component="form" sx={{ '& > :not(style)': { m: .5, width: '32ch' }}} noValidate autoComplete="off" >
@@ -113,7 +147,6 @@ function SubmissionCard(){
                     <Button  color="secondary" variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300}}>Submit</Button>
                 </ThemeProvider>
             </div>
-
         </div>      
     )
 }
