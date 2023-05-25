@@ -16,22 +16,6 @@ function SubmissionCard(){
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
 
-    // this.state = {
-    //     artistName: '',
-    //     trackName: '',
-    //     trackDescription: '',
-    //     email: ''
-    //  }
-
-    // changeHandler = (e) => {
-    //     this.setState({[e.target.name] : e.target.value})
-    //   }
-
-    // submitHandler = (e) => {
-    //     e.preventDefault();
-    //     console.log(this.state);
-    //   }
-
     const theme = createTheme({
         status: {
           danger: '#e53e3e',
@@ -47,15 +31,6 @@ function SubmissionCard(){
           },
         },
       });
-
-
-
-    // let testObj = {
-    //     "artistname": "test",
-    //     "songname": "test",
-    //     "description": "test", 
-    //     "phonenumber": "test"
-    // }
 
     function sendClick(e){
         e.preventDefault();
