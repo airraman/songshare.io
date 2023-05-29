@@ -2,76 +2,51 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import axios from 'axios';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function SubscriptionCard(){
 
-    const [artistName, setArtistName] = useState("")
-    const [trackName, setTrackName] = useState("")
-    const [trackDescription, setTrackDescription] = useState("")
-    const [email, setEmail] = useState("")
-    const [phoneNumber, setPhoneNumber] = useState("")
-    const [musician, setMusician] = useState(false)
 
-    let songObj ={
-        artistName,
-        trackName, 
-        trackDescription, 
-        email, 
+
+    const [userName, setUserName] = useState("")
+    const [phoneNumber, setPhoneNumber] = useState("")
+
+    let userObj ={
+        userName,
         phoneNumber
     }
 
     function sendClick(e){
         console.log("Hi from Submit")
-        console.log(songObj)
+        console.log(userObj)
+
+        axios.post('https://sheet.best/api/sheets/b11b2939-7e20-4683-bb7a-e5e1b0294f2a', userObj)
+        .then(response => {
+          console.log(response);
+        })
+
+        setUserName('')
+        setPhoneNumber('')
+
     }
 
-    function handleArtistName(event){
+    function handleUserName(event){
         console.log(event.target.value)
-        setArtistName(event.target.value)
-    }
-
-    function handleTrackName(event){
-        console.log(event.target.value)
-        setTrackName(event.target.value)
-    }
-
-    function handleTrackDescription(event){
-        console.log(event.target.value)
-        setTrackDescription(event.target.value)
-    }
-
-    function handleEmail(event){
-        console.log(event.target.value)
-        setEmail(event.target.value)
+        setUserName(event.target.value)
+        console.log(userName)
     }
 
     function handlePhoneNumber(event){
         console.log(event.target.value)
         setPhoneNumber(event.target.value)
+        console.log(phoneNumber)
     }
 
-    function handleMusicianChange(e){
-        console.log(e)
-        setMusician(true)
-        console.log(musician)
-    }
-
-    function handleListenerChange(e){
-        console.log(e)
-        setMusician(true)
-        console.log(musician)
-    }
 
     return(
         <div className='subcriptionmain'>
-                        {/* <div className='doublebutton'>
-                <ButtonGroup variant="outlined" aria-label="outlined button group">
-                <Button color="secondary" onClick={handleMusicianChange} >MUSICIAN</Button>
-                <Button color="secondary" onClick={handleListenerChange} >LISTENER</Button>
-                </ButtonGroup>
-            </div> */}
             <div className='cardtext'>
                 <h3>The best music, globally.</h3>
             </div>
@@ -79,8 +54,8 @@ function SubscriptionCard(){
             <div className='subcriptioninputs'>
                 <div>
                     <Box component="form" sx={{ '& > :not(style)': { m: .5, width: '32ch' }}} noValidate autoComplete="off" >
-                        <TextField id="outlined-basic" label="Subscriber Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused/>
-                        <TextField id="outlined-basic" label="Subscriber Phone Number" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused />
+                        <TextField id="outlined-basic" label="Subscriber Name" variant="outlined" sx={{ width: '20vw', input: { color: 'white' }}} color="secondary"  border = "1px solid white" focused onChange={handleUserName}/>
+                        <TextField id="outlined-basic" label="Subscriber Phone Number" variant="outlined" sx={{ width: '50vw', input: { color: 'white' } }}  color="success" focused onChange={handlePhoneNumber}/>
                     </Box>
                 </div>
             </div>

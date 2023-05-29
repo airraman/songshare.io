@@ -12,16 +12,16 @@ function App() {
 
   const [userSongs, setUserSongs] = useState("")
 
-  useEffect(()=> {
-    fetch("http://localhost:8000/songs")
-    .then( res => {
-      return res.json()
-    })
-    .then((data) => {
-      console.log(data)
-      setUserSongs(data)
-    })
-  }, [])
+  // useEffect(()=> {
+  //   fetch("http://localhost:8000/songs")
+  //   .then( res => {
+  //     return res.json()
+  //   })
+  //   .then((data) => {
+  //     console.log(data)
+  //     setUserSongs(data)
+  //   })
+  // }, [])
 
   const [musician, setMusician] = useState(false)
 
