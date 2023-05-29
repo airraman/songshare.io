@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import ButtonGroup from '@mui/material/ButtonGroup';
 import axios from 'axios';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -80,26 +79,6 @@ function SubmissionCard(){
         console.log(event.target.value)
         setEmail(event.target.value)
     }
-
-    function handlePhoneNumber(event){
-        console.log(event.target.value)
-        setPhoneNumber(event.target.value)
-    }
-    
-    const [musician, setMusician] = useState(false)
-
-    function handleMusicianChange(e){
-      console.log(e)
-      setMusician(!musician)
-      console.log(musician)
-  }
-  
-  function handleListenerChange(e){
-      console.log(e)
-      setMusician(!musician)
-      console.log(musician)
-  }
-
   
     return(
         <div className='submissionmain'>

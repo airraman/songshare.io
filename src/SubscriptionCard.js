@@ -3,8 +3,6 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function SubscriptionCard(){
 
@@ -22,6 +20,8 @@ function SubscriptionCard(){
         console.log("Hi from Submit")
         console.log(userObj)
 
+        // alert('form submitted')
+
         axios.post('https://sheet.best/api/sheets/b11b2939-7e20-4683-bb7a-e5e1b0294f2a', userObj)
         .then(response => {
           console.log(response);
@@ -29,7 +29,6 @@ function SubscriptionCard(){
 
         setUserName('')
         setPhoneNumber('')
-
     }
 
     function handleUserName(event){
@@ -59,7 +58,10 @@ function SubscriptionCard(){
                     </Box>
                 </div>
             </div>
-
+            <div>
+                <h3>One text, every Friday.</h3>
+                <h3>One song, one playlist, one album.</h3>
+            </div>
             <div className='subscriptioncontainer'>
                 <Button color="secondary" variant="contained" className='submitbutton' onClick={sendClick} sx={{width: 300,color: '5bb2bf'}}>Subscribe</Button>
             </div>
